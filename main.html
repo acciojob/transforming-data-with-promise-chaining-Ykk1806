@@ -17,7 +17,7 @@
         function dataTransformation(number) {
           return new Promise((resolve, reject) => {
             setTimeout(() => {
-              output.innerText = `Result:${number}`;
+              output.innerText = `Result: ${number}`;
               resolve(number);
             }, 2000);
           });
@@ -27,16 +27,16 @@
           return new Promise((resolve, reject) => {
             setTimeout(() => {
               let multiply = number * 2;
-              output.innerText = `Result:${multiply}`;
+              output.innerText = `Result: ${multiply}`;
               resolve(multiply);
-            }, 1000);
+            }, 2000);
           });
         })
         .then((multiply)=>{
             return new Promise((resolve,reject)=>{
                 setTimeout(()=>{
                   let subtract=multiply-3;
-                  output.innerText=`Result:${subtract}`;
+                  output.innerText=`Result: ${subtract}`;
                   resolve(subtract);
                 },1000)
             })
@@ -45,7 +45,7 @@
             return new Promise((resolve,reject)=>{
                 setTimeout(()=>{
                     let divide=subtract/2;
-                    output.innerText=`Result:${divide}`;
+                    output.innerText=`Result: ${divide}`;
                     resolve(divide);
                 },1000)
             })
@@ -53,7 +53,7 @@
         .then((divide)=>{
             setTimeout(()=>{
                  let addition=divide+10;
-                 output.innerText=`Final Result:${addition}`
+                 output.innerText=`Final Result: ${addition}`
                 },1000)
         })
       }); //listener
